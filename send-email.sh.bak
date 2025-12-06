@@ -33,8 +33,11 @@ swaks \
     --to "${TO_EMAILS}" \
     --header "Subject: ${TEST_SUBJECT}" \
     --body "${TEST_BODY}" \
+    --silent 1 \
+    --quit-after AUTH
 
 echo "--------------------------------------------------------------"
+echo $?
 if [ $? -eq 0 ]; then
     echo "Test email sent successfully from ${FROM_EMAIL}"
 else
