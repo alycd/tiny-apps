@@ -1,4 +1,3 @@
-```markdown
 # Description
 
 This is a simple Bash script to "encrypt" (encode) UUIDs into a URL-safe, compact Base64 format. The script removes dashes from a UUID, converts it into raw bytes, encodes it in Base64, and applies URL-safe substitutions.
@@ -23,8 +22,7 @@ Decrypted : 123e4567-e89b-12d3-a456-426614174000
 Encrypted : Ej5FZ+ibEtOkVkJmFBdAAA
 --------------------------
 ```
-```
-```markdown
+
 # Description
 
 This is a simple Bash script to decode Minecraft's "short UUID" format (sometimes seen in server-side plugins or APIs) back to the standard UUID format. The script handles the special character substitutions (`_` to `/` and `-` to `+`), adds necessary Base64 padding, decodes the value, and formats it as a canonical UUID with dashes.
@@ -57,8 +55,7 @@ Example:
   ./short-uuid-decode.sh ZRsDmlhHRgO0x97fZAm7Cw
   → 651b039a-5847-4603-b4c7-dedf6409bb0b
 ```
-```
-```markdown
+
 # Description
 
 This is a Bash script to create Jira tickets using the Jira REST API. The script takes a JSON input (from stdin) containing a topic, story, and acceptance criteria, and posts it as a new ticket in your specified Jira project. It requires your Jira instance URL, email, API token, project key, and desired issue type.
@@ -106,7 +103,7 @@ or
 ```
 Error: JIRAPAIToken environment variable is not set.
 ```
-```
+
 # Description
 
 This is a simple Bash script that acts as a FIFO (named pipe) reader. It waits for messages sent to a FIFO file (`/tmp/test.fifo`), and prints each received message to the terminal.
