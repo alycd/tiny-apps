@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Upload Page</title>
+</head>
+<body>
+    <h1>Testing Upload Functionality</h1>
+    
+    <h2>Test 1: Without URL parameter (should show presigned URL box)</h2>
+    <p><a href="upload.html" target="_blank">Open upload.html</a></p>
+    
+    <h2>Test 2: With URL parameter (should hide presigned URL box)</h2>
+    <p><a href="upload.html?url=https://example-bucket.s3.amazonaws.com/test.zip?AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&Signature=test" target="_blank">Open upload.html with URL parameter</a></p>
+    
+    <h2>Test 3: With encoded URL parameter</h2>
+    <p><a href="upload.html?url=https%3A%2F%2Fexample-bucket.s3.amazonaws.com%2Ftest.zip%3FAWSAccessKeyId%3DAKIAIOSFODNN7EXAMPLE%26Signature%3Dtest" target="_blank">Open upload.html with encoded URL parameter</a></p>
+</body>
+</html>

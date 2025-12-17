@@ -173,6 +173,14 @@
             display: none;
         }
         
+        #presignedUrlContainer {
+            margin-bottom: 20px;
+        }
+        
+        #presignedUrlContainer.hidden {
+            display: none;
+        }
+        
         .status-message.active {
             display: block;
         }
@@ -193,7 +201,7 @@
         <h1>Upload File to S3</h1>
         <p>Paste your presigned URL and select a file to upload</p>
         
-        <div>
+        <div id="presignedUrlContainer">
             <label for="presignedUrl">Presigned Upload URL</label>
             <input 
                 type="text" 
@@ -239,6 +247,7 @@
         const progressFill = document.getElementById('progressFill');
         const statusMessage = document.getElementById('statusMessage');
         const presignedUrlInput = document.getElementById('presignedUrl');
+        const presignedUrlContainer = document.getElementById('presignedUrlContainer');
         
         let selectedFile = null;
         
@@ -248,6 +257,8 @@
         if (urlParam) {
             // URLSearchParams already decodes it once, so just use it directly
             presignedUrlInput.value = urlParam;
+            // Hide the presigned URL container when URL is provided via query string
+            presignedUrlContainer.classList.add('hidden');
         }
         
         // Enable upload button when both URL and file are provided
